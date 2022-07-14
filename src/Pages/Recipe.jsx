@@ -13,9 +13,10 @@ export const Recipe = () => {
     }, [id]);
     return <>
     
-    {!recipe.idMeal ? (
-    <Preloader />
-    ) : (
+    {
+        !recipe.idMeal ? (
+            <Preloader />
+        ) : (
         <div>
             <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Meals</button>
             <div style={{margin: '0 0 1.5rem'}}>
