@@ -14,8 +14,6 @@ export const Category = () => {
     getFilteredCategory(name).then((data) => setMeals(data.meals));
   }, [name]);
 
-  console.log(name);
-
   return (
     <>
       <button
