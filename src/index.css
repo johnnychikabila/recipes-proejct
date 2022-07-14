@@ -36,8 +36,6 @@ nav {
   flex-grow: 1;
 }
 
-
-
 img, iframe {
   max-width: 100%;
 }
@@ -47,7 +45,10 @@ img, iframe {
   width: 500px;
 }
 .recipesDescription {
-max-width: 70%;
+max-width: 90%;
+}
+.recipesTable {
+  width: 90%;
 }
 
 iframe {
@@ -70,4 +71,5 @@ iframe {
   [type="search"] .validate .Placeholder {
     border-radius: 0px;
   }
+  
 }

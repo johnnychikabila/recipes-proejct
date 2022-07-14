@@ -35,7 +35,7 @@ export const Recipe = () => {
             {recipe.strArea ? <h7 className=''>Area: {recipe.strArea}</h7> : null}
             <p className='recipesDescription'>{recipe.strInstructions}</p>
             
-            <table className='highlight' style={{width: 1000}}>
+            <table className='highlight recipesTable' >
                 <thead>
                     <tr>
                         <th>Ingredient</th>
