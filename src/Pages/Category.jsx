@@ -14,15 +14,15 @@ export const Category = () => {
 
     return <>
         <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Categories</button>
+        <h7 >Breadcrumbs: </h7>
+          <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
+          <span> / </span>
+          <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
         {!meals.length ? (
             <Preloader />
         ) : (
             <MealList meals={meals}/>
         )}
-        <h7 >Breadcrumbs: </h7>
-          <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
-          <span> / </span>
-          <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
           
     </>
 }

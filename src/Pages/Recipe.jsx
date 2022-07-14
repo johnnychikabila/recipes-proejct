@@ -17,6 +17,13 @@ export const Recipe = () => {
     <Preloader />
     ) : (
         <div className="recipe">
+            <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Meals</button>
+            <h7 >Breadcrumbs: </h7>
+          <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
+          <span> / </span>
+          <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
+          <span> / </span>
+          <span><Link to={`/meal/${recipe.idMeal}`} style={{fontSize: '14px'}} >{recipe.strMeal}</Link></span>
             <img src={recipe.strMealThumb} alt={recipe.strMeal} />
             <h1>{recipe.strMeal}</h1>
             <h6>Category: {recipe.strCategory}</h6>
@@ -53,15 +60,8 @@ export const Recipe = () => {
                     <iframe title={id} src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}`} allowFullScreen />
                 </div>
             ) : null}
-            <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Meals</button>
         </div>
         
     )}
-    <h7 >Breadcrumbs: </h7>
-          <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
-          <span> / </span>
-          <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
-          <span> / </span>
-          <span><Link to={`/meal/${recipe.idMeal}`} style={{fontSize: '14px'}} >{recipe.strMeal}</Link></span>
     </>
 }
