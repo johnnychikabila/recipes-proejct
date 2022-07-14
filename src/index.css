@@ -72,4 +72,14 @@ iframe {
     border-radius: 0px;
   }
   
+  nav .brand-logo {
+    left: 30%;
+  }
+
+  .recipesDescription {
+    max-width: 97%;
+    }
+    .recipesTable {
+      width: 97%;
+    }
 }

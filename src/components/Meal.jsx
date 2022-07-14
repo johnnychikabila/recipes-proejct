@@ -11,7 +11,7 @@ export const Meal = (props) => {
       <span className="card-title">{strMeal}</span>
     </div>
     <div className="card-action">
-        <Link to={`/meal/${idMeal}`} className='btn purple darken-2'>Watch recipe</Link>
+        <Link to={`/meal/${idMeal}`} className='btn purple darken-2'>Watch</Link>
     </div>
   </div>
 }
