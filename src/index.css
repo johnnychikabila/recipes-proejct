@@ -76,6 +76,12 @@ iframe {
     left: 30%;
   }
 
+  .recipesImg {
+    width: 98%;
+    height: auto;
+    
+  }
+
   .recipesDescription {
     max-width: 98%;
     }
