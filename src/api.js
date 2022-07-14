@@ -6,7 +6,8 @@ const getMealById = async (mealId) => {
 };
 
 const getAllCategories = async () => {
-    const response = await fetch(API_URL + 'categories.php');
+   
+    const response = await fetch(`${API_URL}categories.php`);
     return await response.json();
 };
 
