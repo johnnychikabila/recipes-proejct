@@ -6,7 +6,7 @@ export const CategoryItem = (props) => {
 
     return <div id={idCategory} className="card">
     <div className="card-image">
-      <img src={strCategoryThumb} alt={strCategory} />
+      <img src={strCategoryThumb} alt={strCategory} loading='lazy' />
     </div>
     <div className="card-content">
       <span className="card-title">{strCategory}</span>

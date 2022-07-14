@@ -18,11 +18,11 @@ export const Recipe = () => {
             <Preloader />
         ) : (
         <div>
-            <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Meals</button>
+            <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back</button>
             <div style={{margin: '0 0 1.5rem'}}>
           <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
           <span> / </span>
-          <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
+          <span><Link to={`/category/${recipe.strCategory}`} style={{fontSize: '14px'}} >{recipe.strCategory}</Link></span>
           <span> / </span>
           <span><Link to={`/meal/${recipe.idMeal}`} style={{fontSize: '14px'}} >{recipe.strMeal}</Link></span>
             </div>
@@ -32,7 +32,7 @@ export const Recipe = () => {
             
             <h1>{recipe.strMeal}</h1>
             <h6>Category: {recipe.strCategory}</h6>
-            {recipe.strArea ? <h7 className=''>Area: {recipe.strArea}</h7> : null}
+            {recipe.strArea ? <h6 style={{fontSize: '14px'}}>Area: {recipe.strArea}</h6> : null}
             <p className='recipesDescription'>{recipe.strInstructions}</p>
             
             <table className='highlight recipesTable' >

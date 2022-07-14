@@ -1,3 +1,4 @@
+
 import { Route, Routes} from 'react-router-dom';
 
 import { Header } from '../../food-project/src/components/Header';
@@ -10,6 +11,7 @@ import {NotFound} from './Pages/NotFound';
 import { Category } from './Pages/Category';
 import { Recipe } from './Pages/Recipe';
 
+
 function App() {
   return (
   <>
@@ -20,7 +22,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/category/:name" element={<Category/>}/>
-          <Route path="/meal/:id" element={<Recipe/>}/>
+          <Route path="/category/:name/:id" element={<Recipe/>}/>
           <Route path="*" element={<NotFound/>}/> 
         </Routes>
       </main>
