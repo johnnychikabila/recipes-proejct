@@ -62,4 +62,12 @@ iframe {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
   }
+
+  .input-field input[type=search] {
+    border-radius: 0px;
+  }
+
+  [type="search"] .validate .Placeholder {
+    border-radius: 0px;
+  }
 }
