@@ -36,8 +36,18 @@ nav {
   flex-grow: 1;
 }
 
+
+
 img, iframe {
   max-width: 100%;
+}
+
+.recipesImg {
+  height: 500px;
+  width: 500px;
+}
+.recipesDescription {
+max-width: 70%;
 }
 
 iframe {

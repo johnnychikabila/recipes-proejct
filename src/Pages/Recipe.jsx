@@ -16,19 +16,24 @@ export const Recipe = () => {
     {!recipe.idMeal ? (
     <Preloader />
     ) : (
-        <div className="recipe">
+        <div>
             <button className='btn purple darken-4' style={{margin: '2rem 0 1.5rem'}} onClick={() => {navigate(-1)}}>Back to Meals</button>
-            <h7 >Breadcrumbs: </h7>
+            <div style={{margin: '0 0 1.5rem'}}>
           <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
           <span> / </span>
           <span><Link to="/category/" style={{fontSize: '14px'}} >Category</Link></span>
           <span> / </span>
           <span><Link to={`/meal/${recipe.idMeal}`} style={{fontSize: '14px'}} >{recipe.strMeal}</Link></span>
-            <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+            </div>
+        <div className="recipe">
+            
+            <img className='recipesImg' src={recipe.strMealThumb} alt={recipe.strMeal} />
+            
             <h1>{recipe.strMeal}</h1>
             <h6>Category: {recipe.strCategory}</h6>
             {recipe.strArea ? <h7 className=''>Area: {recipe.strArea}</h7> : null}
-            <p>{recipe.strInstructions}</p>
+            <p className='recipesDescription'>{recipe.strInstructions}</p>
+            
             <table className='highlight' style={{width: 1000}}>
                 <thead>
                     <tr>
@@ -60,6 +65,8 @@ export const Recipe = () => {
                     <iframe title={id} src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}`} allowFullScreen />
                 </div>
             ) : null}
+            
+            </div>
         </div>
         
     )}

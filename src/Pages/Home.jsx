@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {useLocation, useNavigate, Link} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import {getAllCategories} from '../api';
 import { CategoryList } from '../components/CategoryList';
 import {Preloader} from '../components/Preloader'
@@ -44,7 +44,5 @@ export function Home() {
             <CategoryList catalog={filteredCatalog} />
             
         )}
-        <h7 >Breadcrumbs: </h7>
-          <span><Link to="/" style={{fontSize: '14px'}} >Home</Link></span>
     </>
 }
