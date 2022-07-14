@@ -1,7 +1,16 @@
-import {Link} from 'react-router-dom'
+import {Link, useNavigate, useLocation} from 'react-router-dom'
 
 export const CategoryItem = (props) => {
     const {idCategory, strCategory, strCategoryThumb, strCategoryDescription} = props;
+
+    const {pathname} = useLocation();
+    const navigate = useNavigate();
+    navigate(
+      {
+        pathname,
+        search: `/category/${strCategory}`
+      }
+    );
 
     return <div id={idCategory} className="card">
     <div className="card-image">

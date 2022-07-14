@@ -1,7 +1,16 @@
-import {Link} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 
 export const Meal = (props) => {
     const {idMeal, strMeal, strMealThumb} = props;
+
+    const {pathname} = useLocation();
+    const navigate = useNavigate();
+    navigate(
+      {
+        pathname,
+        search: `/meal/${idMeal}`
+      }
+    );
 
     return <div id={idMeal} className="card">
     <div className="card-image">
