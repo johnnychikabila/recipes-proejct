@@ -32,7 +32,7 @@ export function Home() {
                 item.strCategory
                 .toLowerCase()
                 .includes(search.split('=')[1].toLowerCase())
-                ) : data.categoriesgit commit -m “upload project”
+                ) : data.categories
             );
         });
     }, [search]);
